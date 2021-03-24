@@ -17,6 +17,14 @@ window.moveTo(((window.screen.width - width) / 2), ((window.screen.height - heig
 
 
 // CREATE A HELPER FUNCTION TO RETRIEVE THE HTML ELEMENTS FROM THE DOM
+var submit = window.document.getElementById("submit");
+submit.addEventListener("click", function () {
+    var empid = window.document.getElementById("id").value;
+    var output = window.opener.document.getElementById("loginDetails");
+    output.innerHTML = "ID: " + id;
+    window.close();
+
+});
 }
 window.addEventListener("load", init);
 // HANDLE THE CANCEL BUTTON. WHEN THE USER CLICKS THIS BUTTON, CLOSE THE WINDOW
