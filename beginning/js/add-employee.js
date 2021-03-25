@@ -20,8 +20,12 @@ window.moveTo(((window.screen.width - width) / 2), ((window.screen.height - heig
 var submit = window.document.getElementById("submit");
 submit.addEventListener("click", function () {
     var empid = window.document.getElementById("id").value;
+    var empname = window.document.getElementById("name").value;
+    var empext = window.document.getElementById("extension").value;
+    var empemail = window.document.getElementById("email").value;
+    var empdept = window.document.getElementById("department").value;
     var output = window.opener.document.getElementById("loginDetails");
-    output.innerHTML = "ID: " + id;
+    output.innerHTML = "ID: " + empid + "<br>" + "Name: " + empname + "<br>" + "Extension: " + empext + "<br>" + "Email: " + empemail + "<br>" + "Department: " + empdept;
     window.close();
 
 });
