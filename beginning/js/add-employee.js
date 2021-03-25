@@ -27,8 +27,12 @@ submit.addEventListener("click", function () {
     var output = window.opener.document.getElementById("loginDetails");
     output.innerHTML = "ID: " + empid + "<br>" + "Name: " + empname + "<br>" + "Extension: " + empext + "<br>" + "Email: " + empemail + "<br>" + "Department: " + empdept;
     window.close();
-
 });
+
+var cancel = window.document.getElementById("cancel");
+    cancel.addEventListener("click", function () {
+        window.close();
+    });
 }
 window.addEventListener("load", init);
 // HANDLE THE CANCEL BUTTON. WHEN THE USER CLICKS THIS BUTTON, CLOSE THE WINDOW
